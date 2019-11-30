@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>framework_learning</artifactId>
+        <groupId>com.learning</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>zookeeper</artifactId>
+
+    <properties>
+        <zookeeper.version>3.4.8</zookeeper.version>
+        <curator.version>2.13.0</curator.version>
+        <curator-recipes>2.13.0</curator-recipes>
+    </properties>
+
+
+    <dependencies>
+        <!-- 提供了zk的基本操作 -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator.version}</version>
+        </dependency>
+
+        <!-- 提供了一些zk具体使用场景的封装，如：事件监听，master选举，分布式锁，分布式计数器，分布式barrier，一些方便操作zk的工具等 -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>${curator-recipes}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
