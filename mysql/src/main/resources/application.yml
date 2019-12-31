@@ -1,0 +1,38 @@
+server:
+  port: 11180
+
+
+
+spring:
+  datasource:
+    druid00username: root
+    druid00password: 19920625
+    druid00jdbcUrl: jdbc:mysql://localhost:3306/sharding00
+    druid00driverClass: com.mysql.jdbc.Driver
+
+    druid01username: root
+    druid01password: 19920625
+    druid01jdbcUrl: jdbc:mysql://localhost:3306/sharding01
+    druid01driverClass: com.mysql.jdbc.Driver
+
+    druid02username: root
+    druid02password: 19920625
+    druid02jdbcUrl: jdbc:mysql://localhost:3306/sharding02
+    druid02driverClass: com.mysql.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+#配置分表分库设置属性
+tuling:
+  dsroutingset:
+    #分为三个数据库
+    dataSourceNum: 3
+    #每一个库分为4个相同的表结构
+    tableNum: 4
+    #指定路由的字段
+    routingField: orderId
+    tableSuffixStyle: '%04d'
+    tableSuffixConnect: _
+    routingStrategy: ROUTING_DS_TABLE_STRATEGY
