@@ -49,6 +49,12 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
@@ -63,6 +69,21 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.3.2</version>
         </dependency>
+
+        <!-- sharding jdbc jar包  这个已经升级到apache了，后续使用下面的代替-->
+        <dependency>
+            <groupId>io.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.shardingsphere/sharding-jdbc-spring-boot-starter -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.shardingsphere</groupId>-->
+            <!--<artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+            <!--<version>4.0.0-RC1</version>-->
+        <!--</dependency>-->
+
 
         <dependency>
             <groupId>com.alibaba</groupId>
